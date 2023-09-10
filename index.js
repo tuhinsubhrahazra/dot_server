@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 const server = http.createServer(app);
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://cxnnect-server.onrender.com',
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
