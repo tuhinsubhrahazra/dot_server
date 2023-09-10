@@ -8,8 +8,9 @@ app.use(express.json());
 const server = http.createServer(app);
 const corsOptions = {
     origin: 'https://cxnnect-server.onrender.com',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    credentials: true,
 };
+// optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 
 app.use(cors(corsOptions));
 
