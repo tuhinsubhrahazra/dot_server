@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(express.json());
 const server = http.createServer(app);
+
 const corsOptions = {
     origin: 'https://cxnnect-server.onrender.com',
     credentials: true,
@@ -13,8 +14,7 @@ const corsOptions = {
     allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization', // Specify the allowed headers.
 };
 
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 server.listen(PORT, () => {
     console.log("server is runnong at PORT: " + PORT);
