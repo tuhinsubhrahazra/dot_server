@@ -9,8 +9,10 @@ const server = http.createServer(app);
 const corsOptions = {
     origin: 'https://cxnnect-server.onrender.com',
     credentials: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify the HTTP methods you want to allow.
+    allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization', // Specify the allowed headers.
 };
-// optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+
 
 app.use(cors(corsOptions));
 
